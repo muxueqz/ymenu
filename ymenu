@@ -1,0 +1,30 @@
+#!/bin/sh
+PROGRAM_PATH=$(readlink -f $0 | xargs dirname ) 
+
+while getopts v l option; do
+  case $option in
+    l)
+      ;;
+    n)
+      ;;
+    v)
+      pmenu -v
+      exit
+      ;;
+  esac
+done
+# echo $@
+# echo /dev/stdin
+yad --list --title='ymenu' --column='' \
+  --hide-header \
+  --height 800 --width 800 \
+  --search-column=1 \
+  --no-buttons --separator='' \
+  --no-headers --close-on-unfocus  \
+  --skip-taskbar \
+  --sticky \
+  --css ${PROGRAM_PATH}/gtk-dark.css \
+  --regex-search \
+  --geometry=1024x768
+
+# --no-cancel

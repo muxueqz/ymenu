@@ -25,6 +25,7 @@ yad --list --title='ymenu' --column='' \
   --sticky \
   --css ${PROGRAM_PATH}/gtk-dark.css \
   --regex-search \
+  --no-markup \
   --geometry=1024x768
 
 # --no-cancel

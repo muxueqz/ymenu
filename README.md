@@ -1,2 +1,2 @@
 # ymenu
-A dmenu replacement
+A dmenu replacement that use yad(Yet another dialoging program)

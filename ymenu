@@ -2,24 +2,35 @@
 PROGRAM_PATH=$(readlink -f $0 | xargs dirname ) 
 
 export XDG_CONFIG_DIRS=${PROGRAM_PATH}
+LINES=10
+TITLE="ymenu"
 
-while getopts v l option; do
-  case $option in
+while getopts "l:p:v?" option;do
+  case "${option}" in
     l)
+      LINES="${OPTARG}"
       ;;
-    n)
+    p)
+      TITLE="${OPTARG}"
       ;;
     v)
-      pmenu -v
+      echo "1.0"
+      exit
+      ;;
+    :)
+      echo ":"
+      exit
+      ;;
+    *)
+      echo "*"
       exit
       ;;
   esac
 done
-# echo $@
-# echo /dev/stdin
-yad --list --title='ymenu' --column='' \
+
+  # --height 800 --width 800 \
+yad --list --title="${TITLE}" --column='' \
   --hide-header \
-  --height 800 --width 800 \
   --search-column=1 \
   --no-buttons --separator='' \
   --no-headers --close-on-unfocus  \
@@ -28,6 +39,7 @@ yad --list --title='ymenu' --column='' \
   --css ${PROGRAM_PATH}/gtk-dark.css \
   --regex-search \
   --no-markup \
-  --geometry=1024x768
+  --borders=0 \
+  --geometry=1200x580
 
 # --no-cancel

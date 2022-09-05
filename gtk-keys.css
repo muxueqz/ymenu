@@ -1,0 +1,88 @@
+@binding-set ymenu
+{
+  bind "<Alt>1" {
+    "move-cursor" (buffer-ends, -1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>2" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>3" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>4" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>5" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>6" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>7" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>8" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+
+  bind "<Alt>9" {
+    "move-cursor" (buffer-ends, -1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "move-cursor" (display-lines, 1)
+    "select-cursor-row" (0)
+};
+}
+
+treeview {
+  -gtk-key-bindings: ymenu;
+}
+

@@ -36,10 +36,12 @@ yad --list --title="${TITLE}" --column='' \
   --no-headers --close-on-unfocus  \
   --skip-taskbar \
   --sticky \
-  --css ${PROGRAM_PATH}/gtk-dark.css \
   --regex-search \
   --no-markup \
   --borders=0 \
-  --geometry=1200x580
+  --geometry=1200x580 \
+  --css ${PROGRAM_PATH}/ymenu.gtk.css \
+  --center \
+  --name ymenu
 
 # --no-cancel
